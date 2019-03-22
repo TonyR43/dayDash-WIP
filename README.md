@@ -1,4 +1,4 @@
-# play-final-project-starter
+# Final Countdown TNG
 
 This is a starter application to get you going on your final project.
 
