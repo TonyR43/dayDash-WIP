@@ -4,14 +4,19 @@
     <head>
         <meta charset="UTF-8">
         <title>Test</title>
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container">
         <h1>Test Page</h1>
         <p>@testText</p>
         <form method="post">
             @helper.CSRF.formField
             <input type="text" name="test" id="test">
             <input type="submit" value="Post">
+            <textarea name="wisewords"></textarea>
         </form>
+        </div>
     </body>
 </html>

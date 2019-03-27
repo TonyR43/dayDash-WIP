@@ -5,6 +5,7 @@ import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
+import play.filters.headers.SecurityHeadersFilter;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -33,7 +34,8 @@ public class TestController extends Controller
     {
         DynamicForm form = formFactory.form().bindFromRequest();
         String test = form.get("test");
-        return ok(views.html.test.render(test));
+        String wisewords = form.get("wisewords");
+        return ok(views.html.test.render(wisewords));
     }
 
     @Transactional(readOnly = true)
@@ -56,5 +58,11 @@ public class TestController extends Controller
         db.em().persist(test);
 
         return redirect("/testdb");
+    }
+
+    public Result getLeaflet()
+    {
+        response().setHeader("contentSecurityPolicy", "default-src 'self' 'unsafe-inline' api.tiles.mapbox.com");
+        return ok(views.html.leaflet.render());
     }
 }
