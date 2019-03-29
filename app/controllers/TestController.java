@@ -2,12 +2,12 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import models.MapLocation;
+import models.Sound;
 import models.Test;
 import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
-import play.filters.headers.SecurityHeadersFilter;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -99,6 +99,24 @@ public class TestController extends Controller
     public Result getNavbarDemo()
     {
         return ok(views.html.navbardemo.render());
+    }
+
+    public Result getAudioDemo()
+    {
+        return ok(views.html.audiodemo.render());
+    }
+
+    @Transactional(readOnly = true)
+    public Result getSound(int soundId)
+    {
+        String sql = "SELECT s FROM Sound s WHERE soundId = :soundId";
+
+        TypedQuery<Sound> query = db.em().createQuery(sql, Sound.class);
+        query.setParameter("soundId", soundId);
+
+        Sound sound = query.getSingleResult();
+
+        return ok(sound.getSound());
     }
 
 }
