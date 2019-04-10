@@ -4,7 +4,10 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.TestController.getTest
+GET     /record                     controllers.VoiceController.getRecord
 POST    /                           controllers.TestController.postTest
+
+GET     /home                       controllers.HomeController.getHome
 
 GET     /test                       controllers.TestController.getTest
 POST    /test                       controllers.TestController.postTest
