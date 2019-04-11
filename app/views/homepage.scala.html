@@ -1,17 +1,18 @@
-<link rel="stylesheet" href="home.css">
 <!DOCTYPE html>
 <html lang="en"
 >
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="\assets\stylesheets\home.css">
+    <script src ="\assets\javascripts\clock.js"></script>
 
 </head>
 
-<body>
-<p>
-<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-<a class = "btn btn-primary" href="record" role = "button" >Recorder</a> </p>
+<body onload="clock()">
+
+<div id="Clock" class="clock" onload="clock()"></div>
+<a class = "button" href="record" role = "button" >Recorder UC</a>
 
 
 
