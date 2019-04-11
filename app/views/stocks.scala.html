@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock</title>
+    <link rel="stylesheet" href="\assets\stylesheets\recorder.css">
+
+</head>
+<h2>
+    <a class = "button" href="home" role = "button" >Home</a><a class = "button" href="calendar" role = "button" >Calendar</a><a class = "button" href="record" role = "button" >Voice Memo UC</a><a class = "button" href="weather" role = "button" >Weather</a><a class = "button" href="stocks" role = "button" >Stocks</a>
+</h2>
+<body>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_a28b4"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 980,
+  "height": 610,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "Light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_a28b4"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+</body>
+</html>

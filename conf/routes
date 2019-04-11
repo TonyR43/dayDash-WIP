@@ -5,7 +5,10 @@
 # An example controller showing a sample home page
 GET     /                           controllers.TestController.getTest
 GET     /record                     controllers.VoiceController.getRecord
+GET     /weather                    controllers.WeatherController.getWeather
+GET     /stocks                     controllers.StockController.getStocks
 POST    /                           controllers.TestController.postTest
+GET     /calendar                   controllers.CalendarController.getCalendar
 
 GET     /home                       controllers.HomeController.getHome
 
