@@ -9,6 +9,7 @@ GET     /weather                    controllers.WeatherController.getWeather
 GET     /stocks                     controllers.StockController.getStocks
 POST    /                           controllers.TestController.postTest
 GET     /calendar                   controllers.CalendarController.getCalendar
+GET     /readme                     controllers.ReadMeController.getReadMe
 
 GET     /home                       controllers.HomeController.getHome
 
